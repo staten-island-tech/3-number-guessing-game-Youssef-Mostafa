@@ -14,3 +14,7 @@ letters at every wrong guess
 -When the user guesses correctly inform them and show them their guess
 history using a for loop """
 
+import random
+
+y = random.randint(1, 99999999)
+print(y)
