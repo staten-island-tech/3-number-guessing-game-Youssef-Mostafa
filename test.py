@@ -14,6 +14,9 @@ letters at every wrong guess
 -When the user guesses correctly inform them and show them their guess
 history using a for loop """
 
+
+#number guessing game project
+
 import random
 
 random_number = random.randint(1, 30)
