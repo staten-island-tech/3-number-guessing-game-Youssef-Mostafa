@@ -16,5 +16,20 @@ history using a for loop """
 
 import random
 
-y = random.randint(1, 99999999)
-print(y)
+random_number = random.randint(1, 30)
+
+number_guess = 0
+guess_history = [ ]
+while not random_number == number_guess:
+    number_guess = input("WHAT IS YOUR GUESS?")
+    number_guess = int(number_guess)
+    if random_number == number_guess:
+        print(f"YOU GUESSED THE NUMBER. GOOD JOB. YOUR PREVIOUS GUESSES WERE {guess_history}")
+        quit()
+    else:
+        if number_guess < random_number:
+            guess_history.append(number_guess)
+            print(f"YOUR GUESS IS WRONG. THE RANDOM NUMBER IS GREATER THAN {number_guess}. THE NUMBERS YOU GUESSED ALREADY ARE {guess_history}")
+        else:
+            guess_history.append(number_guess)
+            print(f"YOUR GUESS IS WRONG. THE RANDOM NUMBER IS LESS THAN {number_guess}. THE NUMBERS YOU GUESSED ALREADY ARE {guess_history}")
